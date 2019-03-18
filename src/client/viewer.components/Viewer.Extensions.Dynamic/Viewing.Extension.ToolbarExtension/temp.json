@@ -1,0 +1,32 @@
+{
+    "_id" : ObjectId("234567890123456789012345"),
+    "name" : "ToolbarExtension",
+    "env" : "Local",
+    "desc" : "The ToolbarExtension edit by Joe.",
+    "git" : "https://github.com/Autodesk-Forge/forge-rcdb.nodejs/tree/master/src/client/viewer.components/Viewer.Extensions.Dynamic/Viewing.Extension.ExtensionManager",
+    "layout" : {
+        "type" : "flexLayoutRight",
+        "rightFlex" : 0.35
+    },
+    "model" : {
+        "urn" : "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bGVlZnNtcC1mb3JnZS9zZWF0LmR3Zg",
+        "role" : "3d",
+        "displayName" : "Chair",
+        "name" : "Custom Extensions",
+        "path" : "resources/models/dev/seat/0.svf"
+    },
+    "extraModels" : [ 
+        {
+            "_id" : "59c409ba7590c742c785b292",
+            "name" : "Native Extensions"
+        }
+    ],
+    "dynamicExtensions" : [ 
+        {
+            "id" : "Viewing.Extension.ToolbarExtension",
+            "options" : {
+                "visible" : true
+            }
+        }
+    ]
+}

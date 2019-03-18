@@ -1,0 +1,10 @@
+index.js相当于一个入口
+
+containers放的是页面(page)，如果一个page比较复杂，那么它底下可以有多个subpage
+//不过我感觉 它的页面应该是放在routers里面的。
+
+
+components里面是公共组件
+    -Header 是一个组件  其中index.js是它的入口
+
+

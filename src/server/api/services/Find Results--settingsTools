@@ -1,0 +1,108 @@
+
+E:\forgeProjects\forge-rcdb.nodejs-master\resources\libs\lmv\4.0.1\viewer3D.js:
+ 50711          NAVTOOLSID:      "navTools",
+ 50712          MODELTOOLSID:    "modelTools",
+ 50713:         SETTINGSTOOLSID: "settingsTools",
+ 50714          MEASURETOOLSID:      "measureTools",
+ 50715      };
+ .....
+ 50925          this.modelTools = null;
+ 50926          this.navTools = null;
+ 50927:         this.settingsTools = null;
+ 50928          this.debugMenu = null;
+ 50929          this.modelStats = null;
+ .....
+ 51376                  self.onPanelVisible(modelStructurePanel, self);
+ 51377              }
+ 51378:             self.settingsTools.structurebutton.setState(visible ? avu.Button.State.ACTIVE : avu.Button.State.INACTIVE);
+ 51379          });
+ 51380          return true;
+ .....
+ 51409                          self.onPanelVisible(layersPanel, self);
+ 51410                      }
+ 51411:                     self.settingsTools.layerButton.setState(visible ? avu.Button.State.ACTIVE : avu.Button.State.INACTIVE);
+ 51412                  });
+ 51413              }
+ .....
+ 51439                          self.onPanelVisible(propertyPanel, self);
+ 51440                      }
+ 51441:                     self.settingsTools.propertiesbutton.setState(visible ? avu.Button.State.ACTIVE : avu.Button.State.INACTIVE);
+ 51442                  });
+ 51443  
+ .....
+ 51502          viewerOptionButton.setIcon("adsk-icon-settings");
+ 51503          viewerOptionButton.setToolTip("Settings");
+ 51504:         this.settingsTools.addControl(viewerOptionButton);
+ 51505          this.createViewerOptionsMenu(model);
+ 51506      };
+ .....
+ 51528              };
+ 51529  
+ 51530:             this.settingsTools.addControl(structureButton);
+ 51531:             this.settingsTools.structurebutton = structureButton;
+ 51532  
+ 51533              this.initExplodeSlider();
+ .....
+ 51556                  };
+ 51557  
+ 51558:                 var index = this.settingsTools.indexOf('toolbar-modelStructureTool');
+ 51559                  index = index !== -1 ? index : 0;
+ 51560              
+ 51561:                 this.settingsTools.addControl(layerButton, {index: index+1});
+ 51562:                 this.settingsTools.layerButton = layerButton;
+ 51563              }
+ 51564              viewer.removeEventListener(av.MODEL_LAYERS_LOADED_EVENT, modelLayersInit);
+ .....
+ 51597          };
+ 51598          propertiesButton.setVisible(!viewer.prefs.openPropertiesOnSelect);
+ 51599:         this.settingsTools.addControl(propertiesButton);
+ 51600:         this.settingsTools.propertiesbutton = propertiesButton;
+ 51601  
+ 51602          // New viewer options' panel
+ .....
+ 51613                  viewer.showRenderingOptions(!viewer.renderoptions.isVisible());
+ 51614              };
+ 51615:             this.settingsTools.addControl(renderOptionsButton);
+ 51616          }
+ 51617  
+ .....
+ 51623                  viewer.nextScreenMode();
+ 51624              };
+ 51625:             this.settingsTools.addControl(fullscreenButton);
+ 51626:             this.settingsTools.fullscreenbutton = fullscreenButton;
+ 51627  
+ 51628              this.updateFullscreenButton(this.getScreenMode());
+ .....
+ 51632      GuiViewer3D.prototype.setPropertiesOnSelect = function (onSelect) {
+ 51633          this.prefs.set('openPropertiesOnSelect', onSelect);
+ 51634:         this.settingsTools.propertiesbutton.setVisible(!onSelect);
+ 51635      };
+ 51636  
+ .....
+ 51945                  this.navTools = new AVU.RadioButtonGroup( av.TOOLBAR.NAVTOOLSID );
+ 51946                  this.modelTools = new AVU.ControlGroup( av.TOOLBAR.MODELTOOLSID );
+ 51947:                 this.settingsTools = new AVU.ControlGroup( av.TOOLBAR.SETTINGSTOOLSID );
+ 51948  
+ 51949                  this.toolbar.addControl(this.navTools);
+ 51950                  this.toolbar.addControl(this.modelTools);
+ 51951:                 this.toolbar.addControl(this.settingsTools);
+ 51952  
+ 51953                  this.container.appendChild(this.toolbar.container);
+ .....
+ 51991          }
+ 51992  
+ 51993:         this.settingsTools.fullscreenbutton.setIcon(cls);
+ 51994      };
+ 51995  
+ .....
+ 65104          };
+ 65105          that.simButton.setIcon('toolbar-simulationIcon');
+ 65106:         viewer.settingsTools.addControl(that.simButton, {
+ 65107              index: 1
+ 65108          });
+ .....
+ 65127          if (!that.viewer.model) return;
+ 65128          that.showResultsDlg(false);
+ 65129:         that.viewer.settingsTools.removeControl(this.simButton);
+ 65130          that.viewer.removePanel(this.galleryPanel);
+ 65131          that.galleryPanel.uninitialize();

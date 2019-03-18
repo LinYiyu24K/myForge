@@ -1,0 +1,27 @@
+xtensions
+:
+Array(8)
+0
+:
+{id: "Viewing.Extension.MetaProperties", name: "Meta Properties", enabled: false}
+1
+:
+{id: "Viewing.Extension.Material", name_en: "Material", name: "⭐着色器", enabled: false, options: {…}}
+2
+:
+{id: "Viewing.Extension.ConfigManager", name_en: "Config Manager", name: "⭐视点保存", enabled: false}
+3
+:
+{id: "Viewing.Extension.SelectionFilter", name_en: "Selection Filter", name: "⭐选择过滤器", enabled: false}
+4
+:
+{id: "Viewing.Extension.ScreenShotManager", name_en: "ScreenShot Manager", name: "截图", enabled: false}
+5
+:
+{id: "Viewing.Extension.ShaderMaterial", name_en: "Shader Material", name: "材质着色"}
+6
+:
+{id: "Viewing.Extension.ModelLoader", name_en: "Model Loader", name: "模型加载", enabled: false, options: {…}}
+7
+:
+{id: "Viewing.Extension.PieChart", name_en: "Pie Chart", name: "饼图", enabled: false, options: {…}}
